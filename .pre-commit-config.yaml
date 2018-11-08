@@ -1,0 +1,35 @@
+repos:
+-   repo: https://github.com/ambv/black
+    rev: stable
+    hooks:
+    - id: black
+      language_version: python3.6
+      exclude: (.*/migrations/.*)$
+-   repo: git://github.com/pre-commit/pre-commit-hooks
+    sha: v1.4.0-1
+    hooks:
+    -   id: trailing-whitespace
+        exclude: \.(css|ts|tsx|bck|csv)$
+    -   id: check-merge-conflict
+    -   id: check-json
+    -   id: debug-statements
+    -   id: check-added-large-files
+        args: [--maxkb=500]
+    -   id: flake8
+        args: ["--ignore=E501,W503"]
+    -   id: requirements-txt-fixer
+        files: requirements.in
+-   repo: local
+    hooks:
+    -   id: mutable_defaults
+        name: Check mutable defaults
+        entry: python src/scripts/check_mutable_defaults.py
+        language: system
+        files: \.py$
+    -   id: django
+        name: Django project checks
+        entry: python src/scripts/run_proj_checks.py
+        language: system
+        files: (requirements\.txt|\.py)$
+        exclude: (scripts/.*\.py|tests/.*)$
+        requirements: true

@@ -1,1 +1,4 @@
+Django>2.0, <2.2
+pip-tools
+pre-commit
 psycopg2
