@@ -2,3 +2,5 @@
 *local_*
 *.pyc
 static/*
+.DS_Store
+.pem
