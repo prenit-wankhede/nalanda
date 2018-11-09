@@ -1,4 +1,5 @@
 Django>2.0, <2.2
+path.py
 pip-tools
 pre-commit
 psycopg2
