@@ -9,23 +9,35 @@
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
     </head>
     <body>
-        <div class="page-header">
-            <a href="/admissions">Admissions</a>
-            <a href="/labs">Nalanda Labs</a>
-            <a href="/academic-resources">Academic Resources</a>
-            <a href="/journey">Our Journey</a>
+
+        <div class="container-fluid">
+            <ul class="nav nav-pills">
+                <li><a href="/">Nalanda Academy</a></li>
+                <li class="pull-right"><a href="/admissions">Admissions</a></li>
+                <li class="pull-right"><a href="/labs">Nalanda Labs</a></li>
+                <li class="pull-right"><a href="/academic-resources">Academic Resources</a></li>
+                <li class="pull-right"><a href="/journey">Our Journey</a></li>
+            </ul>
         </div>
 
-        {% block content %}
 
+        {% block content %}
         {% endblock %}
 
-        <div class="page-footer">
-            <a href="/about">About Us</a>
-            <a href="/career">Careers</a>
-            <a href="/contact">Contact Us</a>
-            <a class="btn btn-default" href="https://www.facebook.com/nalandawardha"><i class="fa fa-facebook-official fa-lg" id="facebookicon" aria-hidden="true"></i> Facebook</a>
-            <a class="btn btn-default" href="https://www.twitter.com"><i class="fa fa-twitter fa-lg" id="twittericon" aria-hidden="true"></i> Twitter</a>
+
+        <div class="container-fluid">
+            <div class="footer">
+                <ul>
+                    <li>
+
+                        <a href="/about">About Us</a>
+                        <a href="/career">Careers</a>
+                        <a href="/contact">Contact Us</a>
+                        <a class="btn btn-default" href="https://www.facebook.com/nalandawardha"><i class="fa fa-facebook-official fa-lg" id="facebookicon" aria-hidden="true"></i> Facebook</a>
+                        <a class="btn btn-default" href="https://www.twitter.com"><i class="fa fa-twitter fa-lg" id="twittericon" aria-hidden="true"></i> Twitter</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </body>
 </html>
